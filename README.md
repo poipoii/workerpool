@@ -1,4 +1,9 @@
 WorkerPool
+
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://raw.githubusercontent.com/poipoii/workerpool/master/LICENSE)
+[![Build Status](https://travis-ci.com/poipoii/workerpool.svg?branch=master)](https://travis-ci.com/poipoii/workerpool)
+[![Latest PyPI version](https://img.shields.io/pypi/v/workerpool3.svg)](https://pypi.python.org/pypi/workerpool3/)
+[![Coverage Status](https://coveralls.io/repos/github/poipoii/workerpool/badge.svg?branch=master)](https://coveralls.io/github/poipoii/workerpool?branch=master)
 ==========
 *Performing tasks in many threads made fun!*
 

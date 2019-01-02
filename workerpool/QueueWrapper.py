@@ -7,7 +7,7 @@
 # TODO: The extra methods provided here do nothing for now. Add real
 # functionality to them someday.
 
-from Queue import Queue as OldQueue
+from queue import Queue as OldQueue
 
 __all__ = ['Queue']
 

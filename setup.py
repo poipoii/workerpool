@@ -2,9 +2,9 @@
 
 from setuptools import setup, find_packages
 
-version = '0.9.4'
+version = '0.9.5'
 
-setup(name='workerpool',
+setup(name='workerpool3',
       version=version,
       description="Module for distributing jobs to a pool of worker threads.",
       long_description="""\

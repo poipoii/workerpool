@@ -20,15 +20,15 @@ class TestWorkerPool(unittest.TestCase):
         pool = workerpool.WorkerPool(2)
 
         r = pool.map(self.double, [1, 2, 3, 4, 5])
-        self.assertEquals(set(r), {2, 4, 6, 8, 10})
         pool.shutdown()
+        self.assertEquals(r, [2, 4, 6, 8, 10])
 
     def test_map_multiparam(self):
         "Test map with multiple parameters."
         pool = workerpool.WorkerPool(2)
         r = pool.map(self.add, [1, 2, 3], [4, 5, 6])
-        self.assertEquals(set(r), {5, 7, 9})
         pool.shutdown()
+        self.assertEquals(r, [5, 7, 9])
 
     def test_wait(self):
         "Make sure each task gets marked as done so pool.wait() works."

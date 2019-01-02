@@ -9,6 +9,7 @@ from six.moves.queue import Queue
 
 from workerpool.workers import Worker
 from workerpool.jobs import SimpleJob, SuicideJob
+import collections
 
 
 __all__ = ['WorkerPool', 'default_worker_factory']
@@ -47,7 +48,7 @@ class WorkerPool(Queue):
     """
     def __init__(self, size=1, maxjobs=0,
                  worker_factory=default_worker_factory):
-        if not callable(worker_factory):
+        if not isinstance(worker_factory, collections.Callable):
             raise TypeError("worker_factory must be callable")
 
         self.worker_factory = worker_factory  # Used to build new workers
@@ -90,7 +91,7 @@ class WorkerPool(Queue):
         "Perform a map operation distributed among the workers. Will "
         "block until done."
         results = Queue()
-        args = zip(*seq)
+        args = list(zip(*seq))
         for seq in args:
             j = SimpleJob(results, fn, seq)
             self.put(j)

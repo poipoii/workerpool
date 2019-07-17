@@ -1,8 +1,11 @@
-WorkerPool
+WorkerPool3
 
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://raw.githubusercontent.com/poipoii/workerpool/master/LICENSE)
 [![Build Status](https://travis-ci.com/poipoii/workerpool.svg?branch=master)](https://travis-ci.com/poipoii/workerpool)
-[![Latest PyPI version](https://img.shields.io/pypi/v/workerpool3.svg)](https://pypi.python.org/pypi/workerpool3/)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/workerpool3.svg)
+![PyPI - Wheel](https://img.shields.io/pypi/wheel/workerpool3.svg)
+[![PyPI version](https://badge.fury.io/py/workerpool3.svg)](https://badge.fury.io/py/workerpool3)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/workerpool3.svg)
 [![Coverage Status](https://coveralls.io/repos/github/poipoii/workerpool/badge.svg?branch=master)](https://coveralls.io/github/poipoii/workerpool?branch=master)
 ==========
 *Performing tasks in many threads made fun!*

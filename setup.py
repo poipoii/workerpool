@@ -22,8 +22,9 @@ It consists of these components:
       # Strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
       'Intended Audience :: Developers',
-      'Programming Language :: Python :: 2',
-      'Programming Language :: Python :: 3',
+      'Programming Language :: Python :: 2.7',
+      'Programming Language :: Python :: 3.6',
+      'Programming Language :: Python :: 3.7',
       'Topic :: Software Development :: Libraries :: Python Modules',
       'License :: OSI Approved :: MIT License',
       'Operating System :: OS Independent',
@@ -31,7 +32,7 @@ It consists of these components:
       keywords='pooling threading jobs',
       author='Andrey Petrov',
       author_email='andrey.petrov@shazow.net',
-      url='https://github.com/shazow/workerpool',
+      url='https://github.com/poipoii/workerpool',
       license='MIT',
       packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
       include_package_data=True,

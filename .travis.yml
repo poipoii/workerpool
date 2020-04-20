@@ -1,13 +1,20 @@
 language: python
 cache: pip
-python:
-  - 2.7
-  - 3.6
-  - 3.7
+matrix:
+  include:
+  - python: "2.7"
+    env: TEST_SUITE=suite_2_7
+  - python: "3.6"
+    env: TEST_SUITE=suite_3_6
+  - python: "3.7"
+    env: TEST_SUITE=suite_3_7
+  - python: "3.8"
+    env: TEST_SUITE=suite_3_8
 install:
   - pip install tox-travis coveralls
 script: tox
-after_success: coveralls
+after_success:
+  - test $TEST_SUITE = "suite_3_6" && coveralls
 notifications:
   email:
     on_success: never

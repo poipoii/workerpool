@@ -51,6 +51,6 @@ class TestEquippedWorkers(unittest.TestCase):
         for i in range(10):
             r = results.get()
             # Each result should be an incremented value
-            self.assertEquals(r, i)
+            self.assertEqual(r, i)
 
         pool.shutdown()

@@ -21,14 +21,14 @@ class TestWorkerPool(unittest.TestCase):
 
         r = pool.map(self.double, [1, 2, 3, 4, 5])
         pool.shutdown()
-        self.assertEquals(r, [2, 4, 6, 8, 10])
+        self.assertEqual(r, [2, 4, 6, 8, 10])
 
     def test_map_multiparam(self):
         "Test map with multiple parameters."
         pool = workerpool.WorkerPool(2)
         r = pool.map(self.add, [1, 2, 3], [4, 5, 6])
         pool.shutdown()
-        self.assertEquals(r, [5, 7, 9])
+        self.assertEqual(r, [5, 7, 9])
 
     def test_wait(self):
         "Make sure each task gets marked as done so pool.wait() works."
@@ -41,19 +41,19 @@ class TestWorkerPool(unittest.TestCase):
 
     def test_init_size(self):
         pool = workerpool.WorkerPool(1)
-        self.assertEquals(pool.size(), 1)
+        self.assertEqual(pool.size(), 1)
         pool.shutdown()
 
     def test_shrink(self):
         pool = workerpool.WorkerPool(1)
         pool.shrink()
-        self.assertEquals(pool.size(), 0)
+        self.assertEqual(pool.size(), 0)
         pool.shutdown()
 
     def test_grow(self):
         pool = workerpool.WorkerPool(1)
         pool.grow()
-        self.assertEquals(pool.size(), 2)
+        self.assertEqual(pool.size(), 2)
         pool.shutdown()
 
     def test_changesize(self):
@@ -61,11 +61,11 @@ class TestWorkerPool(unittest.TestCase):
         pool = workerpool.WorkerPool(5)
         for i in range(5):
             pool.grow()
-        self.assertEquals(pool.size(), 10)
+        self.assertEqual(pool.size(), 10)
         for i in range(10):
             pool.shrink()
         pool.wait()
-        self.assertEquals(pool.size(), 0)
+        self.assertEqual(pool.size(), 0)
 
         # Make sure nothing is reading jobs anymore
         q = Queue()

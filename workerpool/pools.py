@@ -48,7 +48,7 @@ class WorkerPool(Queue):
     """
     def __init__(self, size=1, maxjobs=0,
                  worker_factory=default_worker_factory):
-        if not isinstance(worker_factory, collections.Callable):
+        if not isinstance(worker_factory, collections.abc.Callable):
             raise TypeError("worker_factory must be callable")
 
         self.worker_factory = worker_factory  # Used to build new workers
